@@ -83,6 +83,19 @@
       //Increase handler for mobile
       const add = document.getElementById("add");
       add.addEventListener("click", function () {
+         mobile(true);
+      })
+
+      //Decrease handler for mobile
+      const remove = document.getElementById("remove");
+      remove.addEventListener("click", function () {
+         mobile(false);
+      })
+
+      // Mobile
+      function mobile(count){
+         if(count == true)
+         {
          const increase = document.getElementById("total").value;
          const productIncrease = parseInt(increase);
          const final1 = productIncrease + 1;
@@ -94,11 +107,9 @@
          const mobilePriceIncrease = mobileIncrease + 1219;
          document.getElementById("case").innerText = mobilePriceIncrease;
          document.getElementById("caseTotal").innerText = mobilePriceIncrease;
-      })
-
-      //Decrease handler for mobile
-      const remove = document.getElementById("remove");
-      remove.addEventListener("click", function () {
+         }
+         if(count == false)
+         {
          const decrease = document.getElementById("total").value;
          const productDecrease = parseInt(decrease);
          const final2 = productDecrease - 1;
@@ -110,11 +121,26 @@
          const mobilePriceDecrease = mobileDecrease - 1219;
          document.getElementById("case").innerText = mobilePriceDecrease;
          document.getElementById("caseTotal").innerText = mobilePriceDecrease;
-      })
+         }
+      }
+
+      
 
       //Increase handler for mobile case
       const adding = document.getElementById("adding");
       adding.addEventListener("click", function () {
+        caseFunction(true);
+      })
+
+      //Decrease handler for mobile case
+      const removing = document.getElementById("removing");
+      removing.addEventListener("click", function () {
+        caseFunction(false);
+      })
+
+      // Case
+      function caseFunction(caseCount){
+         if(caseCount == true){
          const increment = document.getElementById("totalProduct").value;
          const productIncrement= parseInt(increment);
          const final3 = productIncrement + 1;
@@ -127,12 +153,9 @@
          const casePriceIncrement = caseIncrement + 59;
          document.getElementById("case").innerText = casePriceIncrement;
          document.getElementById("caseTotal").innerText = casePriceIncrement;
-      })
-
-      //Decrease handler for mobile case
-      const removing = document.getElementById("removing");
-      removing.addEventListener("click", function () {
-         const decrement = document.getElementById("totalProduct").value;
+         }
+         if(caseCount == false){
+            const decrement = document.getElementById("totalProduct").value;
          const productDecrement = parseInt(decrement);
          const final4 = productDecrement - 1;
          document.getElementById("totalProduct").value = final4;
@@ -143,12 +166,9 @@
          const casePriceDecrement = caseDecrement - 59;
          document.getElementById("case").innerText = casePriceDecrement;
          document.getElementById("caseTotal").innerText = casePriceDecrement;
-      })
-
+         }
+      }
      
-
-      
-
    </script>
 </body>
 
