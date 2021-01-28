@@ -29,7 +29,7 @@
                            <input id="total" type="text" class="form-control text-center" value="1">
                            <button id="add" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$1219</h5>
+                        <h5 id="mul">$1219</h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -48,7 +48,7 @@
                            <button id="adding" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
+                        <h5 id="mul1">$59</h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -87,12 +87,12 @@
          const productIncrease = parseInt(increase);
          const final1 = productIncrease + 1;
          document.getElementById("total").value = final1;
+         document.getElementById("mul").innerText = '$' + final1 * 1219;
 
          const mobileAdd = document.getElementById("case").innerText;
          const mobileIncrease = parseFloat(mobileAdd); 
          const mobilePriceIncrease = mobileIncrease + 1219;
          document.getElementById("case").innerText = mobilePriceIncrease;
-
          document.getElementById("caseTotal").innerText = mobilePriceIncrease;
       })
 
@@ -103,6 +103,7 @@
          const productDecrease = parseInt(decrease);
          const final2 = productDecrease - 1;
          document.getElementById("total").value = final2;
+         document.getElementById("mul").innerText = '$' + final2 * 1219;
 
          const mobileRemove = document.getElementById("case").innerText;
          const mobileDecrease = parseFloat(mobileRemove); 
@@ -118,6 +119,8 @@
          const productIncrement= parseInt(increment);
          const final3 = productIncrement + 1;
          document.getElementById("totalProduct").value = final3;
+         document.getElementById("mul1").innerText = '$' + final3 * 59;
+
          
          const caseAdding = document.getElementById("case").innerText;
          const caseIncrement = parseFloat(caseAdding); 
@@ -133,6 +136,7 @@
          const productDecrement = parseInt(decrement);
          const final4 = productDecrement - 1;
          document.getElementById("totalProduct").value = final4;
+         document.getElementById("mul1").innerText = '$' + final4 * 59;
 
          const caseRemoving = document.getElementById("case").innerText;
          const caseDecrement = parseFloat(caseRemoving); 
